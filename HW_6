@@ -1,0 +1,35 @@
+
+# 1. Напишіть функцію, що приймає один аргумент будь-якого типу та повертає цей аргумент, перетворений на float.
+# Якщо перетворити не вдається функція має повернути 0.
+
+
+# def to_float_1(arg):
+#     try:
+#         return float(arg)
+#     except (ValueError, TypeError):
+#         return 0
+# result= to_float_1(1)
+# print(result)
+
+
+# result = to_float_1(1)
+
+# 2. Напишіть функцію, що приймає два аргументи. Функція повинна
+# a) якщо аргументи відносяться до числових типів (int, float) - повернути перемножене значення цих аргументів,
+# b) якщо обидва аргументи це строки - обʼєднати в одну строку та повернути
+# c)якщо перший строка, а другий ні - повернути dict де ключ це перший аргумент, а значення - другий
+# d) у будь-якому іншому випадку повернути кортеж з цих аргументів
+#
+def func(a, b):
+  if type(a) in (int, float) and type(b) in (int, float):
+    return a * b
+  elif type(a) is str and type(b) is str:
+    return a + b
+  elif type(a) is str:
+    return {a: b}
+  else:
+    return (a, b)
+
+# result= func(1, 3)
+# print(result)
+
